@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Orders</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body>
+  <div class="hero-section">
+    <h1>Agri-Product</h1>
+    <ul>
+      <li><a href="/Agri-Product/frontend/index.html"class="hero-button"><b>Home</b></a></li>
+      <li><a href="product.html"class="hero-button"><b>Products</b></a></li>
+      <li><a href="/Agri-Product/frontend/about.html"class="hero-button"><b>About</b></a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+   <h2>Your Order</h2>
+   <div  id="orderList" ></div>
+   <h3 class="order-total">Total: ₹<span id="totalAmount">0</span></h3>
+   <button onclick="placeOrder()" class="button">Place Order</button>
+  </div>
+  <script src="../assets/order.js"></script>
+</body>
+</html>

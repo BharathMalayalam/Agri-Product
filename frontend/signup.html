@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="hero-section">
+    <h1>Agri-Product</h1>
+    <ul>
+      <li><a href="index.html"class="hero-button"><b>Home</b></a></li>
+    </ul>
+  </div>
+<div class="container">
+  <h2>Sign Up</h2>
+  <form id="signupForm">
+    <input name="name" placeholder="Full Name" required />
+    <input name="userid" placeholder="User ID" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <input name="phone" placeholder="Phone Number" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <select name="role" required>
+      <option value="">Select Role</option>
+      <option value="seller">Seller</option>
+      <option value="customer">Customer</option>
+    </select>
+    <button type="submit" class="button">Register</button>
+  </form>
+</div>
+  <script src="assets/signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Seller Page</title><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+  <div class="hero-section">
+    <h1>Agri-Product</h1>
+    <ul>
+      <li><a href="index.html"class="hero-button"><b>Home</b></a></li>
+    </ul>
+  </div>
+  <div class="container">
+<h2>Add Product</h2>
+<form id="productForm" enctype="multipart/form-data">
+  <input type="text" name="name" placeholder="Product Name" required>
+  <input type="number" name="quantity" placeholder="Quantity" required>
+  <input type="number" name="price" placeholder="Price" required>
+  <input type="file" name="image" accept="image/*" required>
+  <button class="button" type="submit">Add Product</button>
+</form>
+
+  </div>
+  <script src="assets/seller.js"></script>
+</body>
+</html>

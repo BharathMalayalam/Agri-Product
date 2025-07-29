@@ -1,0 +1,354 @@
+body{
+    font-family: sans-serif;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(300deg,#09F60D, #09F684, #7BF609);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+.hero-section{
+    background-color: #FFFADC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.hero-section h1{
+    margin: 0px;
+    padding-top:10px;
+    margin-left: 15px;
+    font-size: 50px;
+}
+.hero-section li{
+    display: inline-block;
+}
+.hero-section ul{
+    display: flex;
+    justify-content: end;
+    margin: 0px;
+    margin-right: 15px;
+    gap: 10px;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+.hero-button{
+    display: inline-block;
+    background-color: darkgreen;
+    color: white;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+main {
+    padding: 2em;
+}
+
+.hero {
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color:white;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    color: white;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.button {
+    background-color: darkgreen;
+    color: white;
+    padding: 0.8em 1.5em;
+    text-decoration: none;
+    border-radius: 5px;
+     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.features {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 1em;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.feature-item {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(80, 219, 15, 0.1);
+    text-align: center;
+}
+
+.feature-item img {
+    max-width: 250px;
+    height: 150px;
+    margin-bottom: 0.5em;
+    border-radius: 8px;
+
+}
+
+
+.feature-item h3 {
+    color: darkgreen;
+    margin-bottom: 0.3em;
+}
+
+.feature-item p {
+    color:brown;
+    line-height: 1.5;
+}
+footer {
+    background-color: white;
+    color: #222;
+    text-align: center;
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
+}
+footer a{
+    justify-content: space-between;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+   text-decoration: none;
+   color: #222;
+}
+/* Input Box Styling */
+form input,
+form select,
+form textarea {
+
+  width:90%;
+  padding: 12px 14px;
+  margin: 8px 0 16px;
+  border: 1px solid #082803;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fdfdfd;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #08370a;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+  background-color: #f1fff1;
+}
+
+/* Placeholder style */
+form input::placeholder,
+form textarea::placeholder {
+  color: #aaa;
+}
+
+/* Make submit button more prominent */
+form button {
+  padding: 12px;
+  font-size: 16px;
+}
+.container {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  background: linear-gradient(300deg,#09F60D, #09F684, #7BF609);
+  padding: 30px;
+  border: white 3px solid;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+}
+
+/* Fade-in animation for all sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Smooth pop effect on input focus */
+form input:focus,
+form select:focus,
+form textarea:focus {
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* Button hover pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+button:hover {
+  animation: pulse 0.2s ease-in-out;
+}
+
+/* Slide-in form on page load */
+form {
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+main{
+    padding: 2em;
+}
+.about-page .about-section {
+    margin-bottom: 2em;
+}
+
+.about-page .about-section h2 {
+    font-size: 2em;
+    color:white;
+    margin-bottom: 0.5em;
+}
+.about-page .about-section p{
+    color:#212529;
+    margin-bottom: 0.5em;
+    font-style: oblique;
+}
+.about-page .team-section h2 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 1em;
+}
+
+.about-page .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    
+}
+
+.about-page .team-member {
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.about-page .team-member p {
+    font-style:italic;
+}
+
+.about-page .aboutimage {
+    width: 400px;
+    height: 387px;
+    border-radius: 8px;
+   
+}
+.highlight{
+    color: brown;
+    font-style: normal;
+}
+.about-uses h4{
+    font-size: 2em;
+    color: white;
+    margin-bottom: 10px;
+}
+.about-uses li{
+    color: #212529;
+    font-style:oblique;
+}
+
+
+#productContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin: 25px;
+}
+.productContainer {
+  width: 50%;
+  max-width: 1000px;
+  margin: 50px auto;
+  background:linear-gradient(300deg,#09F60D, #09F684, #7BF609);
+  padding: 30px;
+  border: white 3px solid;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+}
+
+.productContainer h2{
+    text-align: center;
+    font-size: 2em;
+}
+
+.product-card {
+  padding: 25px;
+  background: linear-gradient(300deg,#09F60D, #09F684, #7BF609);
+  border: 2px solid white;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #2e7d32;
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: #444;
+}
+
+
+.product-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
