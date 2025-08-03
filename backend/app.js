@@ -10,6 +10,9 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/products', require('./routes/products'));
 app.use('/uploads', express.static('uploads'));
+app.use('/api/loan', require('./routes/loan'));
+app.use('/api/loan', require('./routes/loan'));
+
 
 
 mongoose.connect(process.env.MONGO_URI, {
