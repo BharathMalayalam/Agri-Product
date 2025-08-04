@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agri Loan Application</title>
+  <link rel="stylesheet" href="assets/loan.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body id="Famer-style">
+  <div class="hero-section">
+    <h1>Agri-Product</h1>
+    <ul>
+      <li><a href="../frontend/farmer-home.html"class="hero-button"><b>Home</b></a></li>
+    </ul>
+  </div>
+  <body>
+  <div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+  </div>
+  </body>
+  <section class="loan-form">
+    <h1>Apply for Agri Loan</h1>
+<form id="loanForm">
+  <label for="name">Full Name:</label>
+  <input type="text" name="name" placeholder="Your Name" required><br>
+  <label for="aadhar">Aadhar Number:</label>
+  <input type="text" name="aadhar" placeholder="Aadhar Number" required><br>
+  <label for="amount">Loan Amount (₹):</label>
+  <input type="number" name="amount" placeholder="Loan Amount" required><br>
+  <label for="purpose">Loan Purpose:</label>
+  <input type="text" name="purpose" placeholder="Purpose" required><br>
+  <label for="duration">Duration (in months):</label>
+  <input type="text" name="duration" placeholder="Duration (e.g., 12 months)" required><br>
+  <button type="submit">Apply Now</button>
+</form>
+
+<script>
+document.getElementById('loanForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.target).entries());
+
+  const res = await fetch('http://localhost:4000/api/loan/apply', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+
+  const result = await res.json();
+  alert(result.message);
+  e.target.reset();
+});
+</script>
+
+</body>
+</html>

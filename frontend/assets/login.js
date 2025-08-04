@@ -21,7 +21,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 
     // ✅ Redirect ONLY if login was successful
     if (result.role === 'seller') {
-      window.location.href = 'seller.html';
+      window.location.href = 'farmer-home.html';
     } else {
       window.location.href = 'customer/product.html';
     }

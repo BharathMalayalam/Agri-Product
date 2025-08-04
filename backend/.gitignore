@@ -1,0 +1,47 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS system files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+
+# MongoDB dump files
+dump/
+
+# Uploaded images (optional)
+uploads/
+# If you want to keep uploads in Git, remove the line above
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.swp
+
+# Coverage reports
+coverage/
+
+# Frontend dependencies if using React/Vite/etc.
+client/node_modules/
+client/build/
+client/dist/
+
+# PM2 or nodemon logs
+pids/
+*.pid
+*.seed
