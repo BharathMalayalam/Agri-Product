@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+body {
+  background-color: #f4f9f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: #2e7d32;
+}
+
+.weather, .guidance {
+  margin-bottom: 2rem;
+}
+
+.weather h2, .guidance h2 {
+  color: #388e3c;
+  border-bottom: 2px solid #a5d6a7;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#weatherInfo {
+  font-size: 1.1rem;
+  padding: 1rem;
+  background: #e8f5e9;
+  border-radius: 8px;
+  color: #388e3c;
+}
+
+#cropSuggestions li {
+  padding: 0.6rem;
+  margin-bottom: 0.3rem;
+  background-color: #f1f8e9;
+  border-left: 5px solid #7cb342;
+  border-radius: 5px;
+  color: #388e3c;
+}
+.assistant {
+  margin-top: 2rem;
+}
+
+#chatbox {
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #f9fff9;
+}
+
+#messages {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.message {
+  margin-bottom: 0.5rem;
+}
+
+.user {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.bot {
+  color: #555;
+}
+
+#chatForm {
+  display: flex;
+  gap: 10px;
+}
+
+#userInput {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#chatForm button {
+  background: #66bb6a;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#chatForm button:hover {
+  background: #4caf50;
+}

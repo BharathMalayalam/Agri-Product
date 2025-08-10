@@ -8,6 +8,6 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
   });
   const result = await res.json();
   alert(result.message);
-  if (result.role === 'seller') window.location.href = 'seller.html';
+  if (result.role === 'seller') window.location.href = 'farmer-home.html';
   else window.location.href = 'customer/product.html';
 });

@@ -1,23 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Products</title>
-  <link rel="stylesheet" href="../assets/style.css">
+  <meta charset="UTF-8" />
+  <title>Agri-Product - Available Products</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+    /* Base styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 60px; /* For footer */
+      background: transparent;
+    }
+    #usernameDisplay {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 10px;
+      display: inline-block;
+      width: 200px;
+      vertical-align: top;
+      text-align: center;
+    }
+    .product-img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .hero-button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 10px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .hero-button:hover {
+      background-color: #218838;
+    }
+
+    /* Background animation styles */
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow-x: hidden;
+    }
+    .bg {
+      animation: slide 3s ease-in-out infinite alternate;
+      background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+      bottom: 0;
+      left: -50%;
+      opacity: 0.5;
+      position: fixed;
+      right: -50%;
+      top: 0;
+      z-index: -1;
+    }
+    .bg2 {
+      animation-direction: alternate-reverse;
+      animation-duration: 4s;
+    }
+    .bg3 {
+      animation-duration: 5s;
+    }
+    h1, h2 {
+      font-family: monospace;
+      margin-bottom: 10px;
+    }
+    @keyframes slide {
+      0% {
+        transform: translateX(-25%);
+      }
+      100% {
+        transform: translateX(25%);
+      }
+    }
+
+    /* Footer */
+    footer {
+      background-color: white;
+      color: #222;
+      text-align: center;
+      padding: 1em 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      font-size: 14px;
+    }
+    footer a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      margin-left: 8px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navigation Hero Section */
+    .hero-section {
+      margin-bottom: 20px;
+    }
+    .hero-section ul {
+      padding-left: 0;
+      list-style: none;
+      margin: 10px 0 20px 0;
+    }
+    .hero-section ul li {
+      display: inline;
+    }
+  </style>
 </head>
 <body>
   <div class="hero-section">
     <h1>Agri-Product</h1>
     <ul>
-      <li><a href="/Agri-Product/frontend/index.html" class="hero-button"><b>Home</b></a></li>
-      <li><a href="order.html" class="hero-button"><b>Order</b></a></li>
-      <li><a href="/Agri-Product/frontend/about.html" class="hero-button"><b>About</b></a></li>
+      <li><a href="/Agri-Product/frontend/index.html" class="hero-button">Home</a></li>
+      <li><a href="order.html" class="hero-button">Order</a></li>
     </ul>
   </div>
 
-  <div class="productContainer">
+  <div id="usernameDisplay"></div>
+
+  <div class="productContainer content">
     <h2>Available Products</h2>
     <div id="productContainer"></div>
   </div>
+
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+
+  <footer>
+    <p>&copy; 2025 Agri-Product. All rights reserved.
+      <a href="about.html">About</a>
+    </p>
+  </footer>
 
   <script src="../assets/product.js"></script>
 </body>

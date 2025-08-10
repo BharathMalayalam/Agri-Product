@@ -1,8 +1,11 @@
 # Node.js dependencies
 node_modules/
 
-# Environment variables
-.env
+# .env
+MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/db
+JWT_SECRET=supersecretkey
+OPENAI_API_KEY=sk-...
+
 
 # Logs
 logs/

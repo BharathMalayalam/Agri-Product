@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agri Weather Assistant</title>
+  <link rel="stylesheet" href="../frontend/assets/weather.css" />
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body id="Famer-style">
+    <body>
+  <div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+     <div class="wave"></div>
+  </div>
+  </body>
+    <div class="hero-section">
+    <h1>Agri-Product</h1>
+    <ul>
+      <li><a href="../frontend/farmer-home.html"class="hero-button"><b>Home</b></a></li>
+      <li><a href="../frontend/seller.html"class="hero-button"><b>Selling</b></a></li>
+      <li><a href="../frontend/loan.html"class="hero-button"><b>Loan</b></a></li>
+      <li><a href="index.html" class="hero-button"><b>Login Out</b></a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <header>
+      <h1>🌾 Agri Weather & Crop Assistant</h1>
+      <p>Get real-time weather and expert seasonal crop guidance</p>
+    </header>
+
+    <section class="weather">
+      <h2>Current Weather</h2>
+      <div id="weatherInfo">Loading weather...</div>
+    </section>
+
+    <section class="guidance">
+      <h2>Recommended Crops</h2>
+      <ul id="cropSuggestions"></ul>
+    </section>
+  </div>
+
+  <script src="../frontend/assets/weather.js"></script>
+</body>
+</html>

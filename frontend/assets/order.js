@@ -6,8 +6,8 @@ window.onload = () => {
   cart.forEach((item, index) => {
     const entry = document.createElement('div');
     entry.innerHTML = `
-      <strong>${item.name}</strong><br>
-      ₹${item.price} <br>
+      <strong>${item.name}</strong><h2>
+      ₹${item.price} </h2>
       <button class="hero-button" onclick="removeItem(${index})">Remove</button>
     `;
     list.appendChild(entry);

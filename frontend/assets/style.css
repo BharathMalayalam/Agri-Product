@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     }
 body{
     font-family: sans-serif;
     font-family: "Roboto Mono", monospace;
@@ -9,12 +14,16 @@ body{
     background: linear-gradient(300deg,#09F60D, #09F684, #7BF609);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 .hero-section{
     background-color: #FFFADC;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 }
 .hero-section h1{
     margin: 0px;
@@ -57,6 +66,7 @@ main {
 
 .hero-content {
     flex: 1;
+    flex-grow: 1;
 }
 
 .hero-content h1 {
@@ -88,7 +98,7 @@ main {
     padding: 0.8em 1.5em;
     text-decoration: none;
     border-radius: 5px;
-     cursor: pointer;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 .features {
@@ -134,20 +144,20 @@ main {
     color:brown;
     line-height: 1.5;
 }
+
 footer {
-    background-color: white;
-    color: #222;
-    text-align: center;
-    padding: 1em 0;
-    bottom: 0;
-    width: 100%;
+  background-color: white;
+  color: #222;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: auto; 
 }
-footer a{
-    justify-content: space-between;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-   text-decoration: none;
-   color: #222;
+
+footer a {
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #222;
 }
 /* Input Box Styling */
 form input,
@@ -191,8 +201,35 @@ form button {
   padding: 30px;
   color: #f1fff1;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.ordercontainer{
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  color: #f1fff1;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  background: linear-gradient(-60deg, #6c3 , #09f);
+}
+#orderList div{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-rows: 50px;
+  gap: 5px;
+  margin: 25px;
+  
+} 
+#orderList div strong {
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: cursive;
+}
+h3.order-total{
+  margin-left: 35px;
+  font-family: cursive;
+  font-size: 30px;
 }
 
 /* Fade-in animation for all sections */
@@ -259,7 +296,6 @@ main{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    
 }
 
 .about-page .team-member {
@@ -277,7 +313,6 @@ main{
     width: 400px;
     height: 387px;
     border-radius: 8px;
-   
 }
 .highlight{
     color: brown;
@@ -299,17 +334,6 @@ main{
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
   margin: 25px;
-}
-.productContainer {
-  width: 50%;
-  max-width: 1000px;
-  margin: 50px auto;
-  background:linear-gradient(300deg,#09F60D, #09F684, #7BF609);
-  padding: 30px;
-  border: white 3px solid;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-
 }
 
 .productContainer h2{

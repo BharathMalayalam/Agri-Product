@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -12,6 +13,7 @@ app.use('/api/products', require('./routes/products'));
 app.use('/uploads', express.static('uploads'));
 app.use('/api/loan', require('./routes/loan'));
 app.use('/api/loan', require('./routes/loan'));
+
 
 
 

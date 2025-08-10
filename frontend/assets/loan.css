@@ -5,16 +5,20 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+.container {
+  max-width: none;
+}
 
 .loan-form {
   background: white;
-  max-width: 500px;
+  width: 800px; /* fixed width */
   margin: 80px auto;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: relative; 
 }
+
 
 .loan-form h1 {
   text-align: center;
