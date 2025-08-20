@@ -5,10 +5,51 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body id="Famer-style"> 
+<body> 
   <style>
+        html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
     footer {
       background-color: white;
       color: #222;
@@ -30,31 +71,30 @@ color: #222;
 }
   </style>
   <body>
-  <div>
-     <div class="wave"></div>
-     <div class="wave"></div>
-     <div class="wave"></div>
-  </div>
+
   </body>
   <div class="hero-section">
     <h1>Agri-Product</h1>
     <ul>
-      <li><a href="../frontend/seller.html"class="hero-button"><b>Selling</b></a></li>
-      <li><a href="../frontend/loan.html"class="hero-button"><b>Loan</b></a></li>
-      <li><a href="../frontend/farmer-guide.html"class="hero-button"><b>Weather</b></a></li>
-      <li><a href="index.html" class="hero-button"><b>LogOut</b></a></li>
+      <li><a href="../customer/product.html"class="hero-button"><b>Products</b></a></li>
+      <li><a href="../customer/order.html"class="hero-button"><b>Order</b></a></li>
+      <li><a href="../index.html"class="hero-button"><b>Logout</b></a></li>
     </ul>
   </div>
+   <div class="bg"></div>
+ <div class="bg bg2"></div>
+ <div class="bg bg3"></div>
+     <div class="content">
   <main>
      <section class="hero">
       <div class="hero-content">
         <h1 >From Our Farm to Your Fork, Harvesting Happiness for All, and Nurturing nature for a sustainable world.</h1>
       </div>
       <div class="hero-image">
-        <img src="image/herosection-image.png" alt="Vegetable Image">
+        <img src="../image/herosection-image.png" alt="Vegetable Image">
       </div>
       </main>
-      
+     </div>
     <footer style="position: fixed ;"   >
         <p>&copy; 2025 Agri-Product. All rights reserved.<a href="about.html"><b>About</b></a></p>
     </footer>

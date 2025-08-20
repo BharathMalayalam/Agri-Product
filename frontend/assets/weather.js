@@ -1,7 +1,8 @@
 const apiKey = '8add6c323796cef8d2380a4fbcd10bf8';
-const city = 'Erode';
+
 
 async function getWeather() {
+  const city=document.getElementById('city_name').value;
   const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
   const data = await res.json();
 
@@ -36,27 +37,4 @@ function recommendCrops(weather) {
 }
 
 getWeather();
-const chatForm = document.getElementById('chatForm');
-const userInput = document.getElementById('userInput');
-const messages = document.getElementById('messages');
-
-chatForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const userMsg = userInput.value.trim();
-  if (!userMsg) return;
-
-  addMessage('You', userMsg, 'user');
-  userInput.value = '';
-
-  const reply = await getAIResponse(userMsg);
-  addMessage('AgriBot', reply, 'bot');
-});
-
-function addMessage(sender, text, className) {
-  const div = document.createElement('div');
-  div.className = `message ${className}`;
-  div.innerHTML = `<strong>${sender}:</strong> ${text}`;
-  messages.appendChild(div);
-  messages.scrollTop = messages.scrollHeight;
-}
 

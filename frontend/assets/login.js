@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 
     if (!res.ok) {
       alert(result.message || 'Login failed');
-      return; // ❗ Stop execution if login failed
+      return;
     }
 
     alert(result.message);
@@ -23,7 +23,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     if (result.role === 'seller') {
       window.location.href = 'farmer-home.html';
     } else {
-      window.location.href = 'customer/product.html';
+      window.location.href = 'customer/customer-home.html';
     }
 
   } catch (err) {

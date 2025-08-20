@@ -24,7 +24,7 @@
       <li><a href="../frontend/farmer-home.html"class="hero-button"><b>Home</b></a></li>
       <li><a href="../frontend/seller.html"class="hero-button"><b>Selling</b></a></li>
       <li><a href="../frontend/loan.html"class="hero-button"><b>Loan</b></a></li>
-      <li><a href="index.html" class="hero-button"><b>Login Out</b></a></li>
+      <li><a href="index.html" class="hero-button"><b>LogOut</b></a></li>
     </ul>
   </div>
   <div class="container">
@@ -32,7 +32,10 @@
       <h1>🌾 Agri Weather & Crop Assistant</h1>
       <p>Get real-time weather and expert seasonal crop guidance</p>
     </header>
-
+    <section>
+      <input type="text" id="city_name">
+      <button onclick="getWeather()">Summit</button>
+    </section>
     <section class="weather">
       <h2>Current Weather</h2>
       <div id="weatherInfo">Loading weather...</div>
