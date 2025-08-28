@@ -1,20 +1,38 @@
-const apiKey = '8add6c323796cef8d2380a4fbcd10bf8';
+const apiKey = "4fe6138e0855075260eb98f0c32c5e1d"; // Replace with your OpenWeatherMap API key
 
 
 async function getWeather() {
-  const city=document.getElementById('city_name').value;
+  const city=document.getElementById('city_name').value || 'Erode';
+  // Ensure the URL is correct and includes the necessary parameters
   const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+  if (!res.ok) {
+
+    console.error(`HTTP error! status: ${res.status}`);
+    // You might want to display an error message to the user
+    document.getElementById('weatherInfo').innerHTML = `Error fetching weather: ${res.statusText}`;
+    return; // Stop execution if the response is not OK
+  }
+
   const data = await res.json();
 
   const weatherText = `
-    Location: ${data.name} <br>
-    Temperature: ${data.main.temp}°C <br>
-    Weather: ${data.weather[0].main} - ${data.weather[0].description}
+    ${data.main.temp}°C <br>
+  `;
+  const weatherText1 = `
+    Location:<strong><b> ${data.name}, ${data.sys.country}</b> </strong><br>
+    Weather:${data.weather[0].main} - ${data.weather[0].description} <br>
+    Wind Speed: ${data.wind.speed} m/s <br>
+    Pressure: ${data.main.pressure} hPa <br> 
+    Temperature Range: ${data.main.temp_min}°C - ${data.main.temp_max}°C <br>
+    Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString
+()} <br>
+    Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()} <br>
   `;
   document.getElementById('weatherInfo').innerHTML = weatherText;
-
+  document.getElementById('weatherDetails').innerHTML = weatherText1;
   recommendCrops(data.weather[0].main.toLowerCase());
 }
+
 
 function recommendCrops(weather) {
   const cropList = {

@@ -1,117 +1,113 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: normal;
-}
-
-body {
-  background-color: #f4f9f4;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-}
-
+/* ...existing code... */
 header {
   text-align: center;
   margin-bottom: 2rem;
+  color: white;
+  margin-top: 10px;
+  font-size: 20px;
 }
-
-header h1 {
-  color: #2e7d32;
-}
-
-.weather, .guidance {
-  margin-bottom: 2rem;
-}
-
-.weather h2, .guidance h2 {
-  color: #388e3c;
-  border-bottom: 2px solid #a5d6a7;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-#weatherInfo {
-  font-size: 1.1rem;
-  padding: 1rem;
-  background: #e8f5e9;
+#city_name{
+  padding: 10px;
+  border: 2px solid #388e3c;
   border-radius: 8px;
-  color: #388e3c;
+  font-size: 1rem;
+  width: 200px;
+  outline: none;
+  margin-left: 800px;
+}
+.btn
+{
+  padding:8px;
+  border-radius: 10px;
+  background-color: darkgreen;
+  color: white;
+  margin-left:10px ;
+}
+.weatherSearch
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align:justify;
+  justify-content: center;
+}
+.weatherSearch h2{
+  font-size: 2rem;
+  font-weight: 700;
+  color: snow;
+  letter-spacing: 0.5px;
+}
+.weather{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  align-items: center;
+}
+#weatherInfo {
+  font-size: 150px;
+  font-style: italic;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  font-weight: 500;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: ghostwhite;
+  margin-bottom: 1.5rem;
+}
+#weatherDetails{
+  font-size: 30px;
+  margin-left: 60em;
+  margin-top: 25rem;
+  margin: 10px;
+  color: thistle;
+}
+.guidance {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin:1.5 rem 1.5rem !important;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.guidance h2{
+  font-size: 30px;
+  margin : 1.5rem  1rem !important;
+  color: white;
+}
+#cropSuggestions {
+  list-style: none;
+  padding: 0;
 }
 
 #cropSuggestions li {
-  padding: 0.6rem;
-  margin-bottom: 0.3rem;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
   background-color: #f1f8e9;
   border-left: 5px solid #7cb342;
-  border-radius: 5px;
-  color: #388e3c;
-}
-.assistant {
-  margin-top: 2rem;
-}
-
-#chatbox {
-  border: 1px solid #c8e6c9;
   border-radius: 8px;
-  padding: 1rem;
-  background: #f9fff9;
+  color: #388e3c;
+  font-size: 1.05rem;
+  transition: background 0.2s;
 }
 
-#messages {
-  max-height: 200px;
-  overflow-y: auto;
-  margin-bottom: 1rem;
+#cropSuggestions li:hover {
+  background-color: #dcedc8;
 }
 
-.message {
-  margin-bottom: 0.5rem;
+@media (max-width: 600px) {
+  .weather {
+    padding: 1rem;
+    max-width: 95vw;
+  }
+  #weatherInfo {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
 }
 
-.user {
-  font-weight: bold;
-  color: #2e7d32;
-}
-
-.bot {
-  color: #555;
-}
-
-#chatForm {
-  display: flex;
-  gap: 10px;
-}
-
-#userInput {
-  flex: 1;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-#chatForm button {
-  background: #66bb6a;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#chatForm button:hover {
-  background: #4caf50;
-}
+/* ...existing code... */
