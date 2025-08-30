@@ -219,6 +219,8 @@ form button {
   grid-template-rows: 50px;
   gap: 5px;
   margin: 25px;
+  align-items: center;
+  justify-items: center;
   
 } 
 #orderList div strong {

@@ -1,20 +1,14 @@
-const apiKey = "4fe6138e0855075260eb98f0c32c5e1d"; // Replace with your OpenWeatherMap API key
-
 
 async function getWeather() {
+  const apiKey = "4fe6138e0855075260eb98f0c32c5e1d"; 
   const city=document.getElementById('city_name').value || 'Erode';
-  // Ensure the URL is correct and includes the necessary parameters
   const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
   if (!res.ok) {
-
     console.error(`HTTP error! status: ${res.status}`);
-    // You might want to display an error message to the user
     document.getElementById('weatherInfo').innerHTML = `Error fetching weather: ${res.statusText}`;
-    return; // Stop execution if the response is not OK
+    return; 
   }
-
   const data = await res.json();
-
   const weatherText = `
     ${data.main.temp}°C <br>
   `;
@@ -32,8 +26,6 @@ async function getWeather() {
   document.getElementById('weatherDetails').innerHTML = weatherText1;
   recommendCrops(data.weather[0].main.toLowerCase());
 }
-
-
 function recommendCrops(weather) {
   const cropList = {
     clear: ['Groundnut', 'Maize', 'Cotton'],

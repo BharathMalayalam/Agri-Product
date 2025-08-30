@@ -19,10 +19,9 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
 
     alert(result.message);
 
-    // ✅ Redirect ONLY if login was successful
-    if (result.role === 'seller') {
+    if ( result.role === 'seller') {
       window.location.href = 'farmer-home.html';
-    } else {
+    } else if (result.role === 'customer') {
       window.location.href = 'customer/customer-home.html';
     }
 
