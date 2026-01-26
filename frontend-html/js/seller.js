@@ -1,4 +1,3 @@
-const { route } = require("../../backend/routes/auth");
 
 document.getElementById('productForm').addEventListener('submit', async (e) => {
   e.preventDefault();
