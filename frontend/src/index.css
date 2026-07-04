@@ -95,6 +95,65 @@ p {
   color: var(--text-muted);
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* Link Styling */
+/* Plain links (not buttons, not logo) get an underline animation */
+a:not(.btn):not(.logo):not(.btn-link) {
+  color: var(--primary);
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+
+a:not(.btn):not(.logo):not(.btn-link)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+a:not(.btn):not(.logo):not(.btn-link):hover::after {
+  width: 100%;
+}
+
+/* Navbar specific link style */
+.navbar a:not(.btn):not(.logo) {
+  position: relative;
+  color: var(--text-main);
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+.navbar a:not(.btn):not(.logo):hover {
+  color: var(--primary);
+}
+
+.navbar a:not(.btn):not(.logo)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar a:not(.btn):not(.logo):hover::after {
+  width: 100%;
+}
+
+
 /* Components */
 .card {
   background: var(--card-bg);
@@ -124,6 +183,11 @@ p {
   cursor: pointer;
   transition: var(--transition);
   text-decoration: none;
+  /* Reset underline for buttons */
+}
+
+.btn:after {
+  display: none;
 }
 
 .btn-primary {
