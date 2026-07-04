@@ -19,14 +19,17 @@ const upload = multer({ storage: storage });
 // POST route to add product with image
 router.post('/', upload.single('image'), async (req, res) => {
   try {
-    const { name, quantity, price } = req.body;
+    const { name, quantity, price, category, farmer, farmerName } = req.body;
     const imageUrl = req.file ? `http://localhost:4000/uploads/${req.file.filename}` : '';
 
     const newProduct = new Product({
       name,
       quantity,
       price,
-      image: imageUrl
+      image: imageUrl,
+      category,
+      farmer,
+      farmerName
     });
 
     await newProduct.save();
